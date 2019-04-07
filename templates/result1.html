@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <body>
+        <table border="1">
+            <thead>
+                <th>Name</th>
+                <th>Gender</th>
+            </thead>
+            <tbody>      
+                    {% for row_index in range(res|count) %}
+                    <tr>
+                      <td>{{ res[row_index]['name'] }}</td>
+                      <td>{{ res[row_index]['gender'] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <body>
+        <table border="1">
+            <thead>
+                <th>release_date</th>
+            </thead>
+            <tbody>      
+                    {% for row_index in range(res|count) %}
+                    <tr>
+                      <td>{{ res[row_index]['release_date'] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>

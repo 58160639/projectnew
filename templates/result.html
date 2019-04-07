@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <table border="1">
+            <thead>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Charactor</th>
+            </thead>
+            <tbody>      
+                    {% for row_index in range(res|count) %}
+                    <tr>
+                      <td>{{ res[row_index]['name'] }}</td>
+                      <td>{{ res[row_index]['gender'] }}</td>
+                      <td>{{ res[row_index]['charactor'] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>
